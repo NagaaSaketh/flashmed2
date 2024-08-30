@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Poppins", sans-serif;
+}
+#navbar{
+  background-color: #007bff;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+#logo{
+  width: 80%;
+  margin: auto;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+#content{
+  width: 70%;
+  margin: auto;
+}
+
+#med-form{
+  padding-top: 1.2rem;
+}
+#med-form div,#med-form button{
+  margin:0.5rem;
+}
+#med-form button{
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgb(90, 49, 90);
+  color: white;
+  border: 0;
+  letter-spacing: 3px;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#shifts{
+  display: flex;
+  justify-content: space-between;
+}
+#med-name{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#med-name input{
+  flex-grow: 1;
+  padding: 0.4rem;
+}
+#med-name #shifts{
+  flex-grow: 1;
+}
+#custom-time{
+  display: flex;
+}
+#custom-time input{
+  flex-grow: 1;
+}
+#custom-time label{
+  flex-grow: 1;
+}
+
+.medicine{
+  font-size: 1.2rem;
+}
+.medicine-container{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: baseline;
+  gap: 10px;
+}
+
+/* FLIP */
+.medicine-card {
+  width: 40%;
+  height: fit-content;
+  margin: 20px;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  box-shadow: 2px 1px 5px gray;
+  padding: 0.8rem;
+}
+ul{
+  list-style: none;
+  padding: 0.4rem;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.medicine-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.card-front {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.card-back {
+  background-color: #007bff;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 10px;
+  text-align: center;
+}
